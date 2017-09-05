@@ -1,0 +1,21 @@
+<h1>New Ad</h1>
+
+<div class="row">
+    <%= form_for @advertisement do |f| %>
+        <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: 'form-control'%>
+        </div>
+        <div class="form-group">
+            <%= f.label :copy %>
+            <%= f.text_area :copy, class: 'form-control'%>
+        </div>
+        <div class="form-group">
+            <%= f.label :price %>
+            <%= f.text_field :title, class: 'form-control'%>
+        </div>
+        <div class="form-group">
+            <%= f.submit "Save", class: 'btn btn-sucess' %>
+        </div>
+    <% end %>
+</div>

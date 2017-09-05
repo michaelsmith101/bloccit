@@ -1,0 +1,6 @@
+<h1>Ads</h1>
+<% @advertisements.each do |ad| %>
+    <div>
+        <%= link_to "#{ad.title}: $#{ad.price}", ad%>
+    </div>
+<% end %>
