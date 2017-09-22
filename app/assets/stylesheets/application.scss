@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ 
+ .user-info {
+  margin-top: 9px;
+ }
+ 
+ .nav {
+  margin-top: 5px;
+ }
 
 
 
