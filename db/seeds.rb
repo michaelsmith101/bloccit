@@ -40,5 +40,5 @@ topics = Topic.all
  puts "Seed finished"
  puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
- puts "#{SponsoredPost.count} posts created"
+ puts "#{SponsoredPost.count} sponsored posts created"
  puts "#{Comment.count} comments created"

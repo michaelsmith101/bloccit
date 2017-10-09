@@ -46,12 +46,12 @@ RSpec.describe SponsoredPostController, type: :controller do
     end
     
     it "assigns the new post to @sponsored_post" do
-      sponsored_post :create, topic_id: my_topic.id, sponsored_post: {title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 1}
+      post :create, topic_id: my_topic.id, sponsored_post: {title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 1}
       expect(assigns(:sponsored_post)).to eq SponsoredPost.last
     end
     
     it "redirects to the new post" do
-      sponsored_post :create, topic_id: my_topic.id, sponsored_post: {title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 1}
+      post :create, topic_id: my_topic.id, sponsored_post: {title: RandomData.random_sentence, body: RandomData.random_paragraph, price: 1}
       expect(response).to redirect_to [my_topic, SponsoredPost.last]
     end
   end
@@ -98,7 +98,7 @@ RSpec.describe SponsoredPostController, type: :controller do
        new_body = RandomData.random_paragraph
        new_price = 2
  
-       put :update, topic_id: my_topic.id, id: my_post.id, post: {title: new_title, body: new_body, price: new_price}
+       put :update, topic_id: my_topic.id, id: my_post.id, sponsored_post: {title: new_title, body: new_body, price: new_price}
        expect(response).to redirect_to [my_topic, my_post]
      end
    end
